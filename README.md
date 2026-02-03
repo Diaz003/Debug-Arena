@@ -59,10 +59,10 @@ El código se actualiza de forma regular para reflejar el progreso diario.
 ## 🔗 Enlaces
 
 - Repositorio GitHub:  
-  [https://github.com/TU_USUARIO/Debug-Arena](https://github.com/Diaz003)
+  https://github.com/Diaz003
 
 - Página de itch.io:  
-  [https://TU_USUARIO.itch.io/debug-arena](https://itch.io/profile/diaz003)
+  https://itch.io/profile/diaz003
 
 ---
 
