@@ -73,7 +73,7 @@ El código se actualiza de forma regular para reflejar el progreso diario.
 - Página de itch.io:  
   https://itch.io/profile/diaz003
 
---
+---
 
 ## 📌 Notas
 
