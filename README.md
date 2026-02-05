@@ -66,6 +66,15 @@ El código se actualiza de forma regular para reflejar el progreso diario.
 
 ---
 
+## 🎵 Créditos (audio)
+
+- "Películas y efectos especiales - Drone hostile alien lands ambient background track"
+  Fuente: Pixabay
+  Enlace: https://pixabay.com/es/sound-effects/pel%c3%adculas-y-efectos-especiales-drone-hostile-alien-lands-ambient-background-track-376124/
+  Licencia: DRONE - Hostile Alien Lands - Ambient Background Track
+
+
+
 ## 📌 Notas
 
 Este proyecto prioriza la jugabilidad funcional y un alcance realista, evitando sistemas complejos como mapas extensos, inventarios avanzados o multijugador.
