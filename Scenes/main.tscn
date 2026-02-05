@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://ddnljy2345qq3"]
+
+[ext_resource type="Script" uid="uid://blee66qc2tl5j" path="res://Scenes/main.gd" id="1_8gbba"]
+[ext_resource type="Texture2D" uid="uid://8j0pryf1edrt" path="res://Maps/Maps.png" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://b4buqq1nruox0" path="res://Characters/Player/player.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://flndab53meod" path="res://UI/pause_menu.tscn" id="4_jjvhh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(1316.5, 79.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(82, 649)
+
+[node name="Main" type="Node2D" unique_id=391933908]
+script = ExtResource("1_8gbba")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=757871101]
+texture_filter = 1
+position = Vector2(576, 327.99997)
+scale = Vector2(0.38806853, 0.41653743)
+texture = ExtResource("1_bo1nx")
+
+[node name="player" parent="." unique_id=2000575875 instance=ExtResource("2_8gbba")]
+position = Vector2(357, 195)
+
+[node name="walls" type="StaticBody2D" parent="." unique_id=2058272742]
+
+[node name="Walls_Lower" type="CollisionShape2D" parent="walls" unique_id=891707837]
+position = Vector2(576.25, 689.375)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="Wall_Upper" type="CollisionShape2D" parent="walls" unique_id=1764296195]
+position = Vector2(575.5, -38.75)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="Wall_Left" type="CollisionShape2D" parent="walls" unique_id=239724247]
+position = Vector2(-41, 325.5)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="Wall_Right" type="CollisionShape2D" parent="walls" unique_id=1389315623]
+position = Vector2(1192, 324)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=857420803]
+position = Vector2(632, 678)
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=28057387]
+
+[node name="PauseMenu" parent="UILayer" unique_id=1241082772 instance=ExtResource("4_jjvhh")]
+anchors_preset = -1
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 2.0
+offset_bottom = 1.0
+grow_horizontal = 1
+grow_vertical = 1
