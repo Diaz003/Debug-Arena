@@ -49,6 +49,15 @@ El proyecto está diseñado como un juego compacto y alcanzable, centrado en mec
 
 ---
 
+## 🎵 Créditos (audio)
+
+- "Películas y efectos especiales - Drone hostile alien lands ambient background track"
+  Fuente: Pixabay
+  Enlace: https://pixabay.com/es/sound-effects/pel%c3%adculas-y-efectos-especiales-drone-hostile-alien-lands-ambient-background-track-376124/
+  Licencia: DRONE - Hostile Alien Lands - Ambient Background Track
+
+---
+
 ## 📁 Estado del proyecto
 
 Proyecto en desarrollo como trabajo académico.  
@@ -64,16 +73,7 @@ El código se actualiza de forma regular para reflejar el progreso diario.
 - Página de itch.io:  
   https://itch.io/profile/diaz003
 
----
-
-## 🎵 Créditos (audio)
-
-- "Películas y efectos especiales - Drone hostile alien lands ambient background track"
-  Fuente: Pixabay
-  Enlace: https://pixabay.com/es/sound-effects/pel%c3%adculas-y-efectos-especiales-drone-hostile-alien-lands-ambient-background-track-376124/
-  Licencia: DRONE - Hostile Alien Lands - Ambient Background Track
-
-
+--
 
 ## 📌 Notas
 
