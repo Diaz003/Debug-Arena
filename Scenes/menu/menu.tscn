@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://hu21i88j11kw"]
+
+[ext_resource type="Script" uid="uid://dqq82nv725xog" path="res://menu.gd" id="1_1rerr"]
+[ext_resource type="Texture2D" uid="uid://ck64mjk7jeep7" path="res://Scenes/menu/menu.png" id="2_xhh6f"]
+[ext_resource type="PackedScene" uid="uid://cjdtsy6n7hf1s" path="res://Scenes/title/title.tscn" id="3_etjwi"]
+[ext_resource type="PackedScene" uid="uid://dlg0p3fm8doel" path="res://Scenes/opciones/opciones.tscn" id="4_158mb"]
+
+[node name="menu" type="Control" unique_id=115816410]
+layout_mode = 3
+anchor_right = 1.001
+anchor_bottom = 1.0
+offset_right = -0.15209961
+offset_bottom = -4.0
+script = ExtResource("1_1rerr")
+
+[node name="MainPanel" type="Control" parent="." unique_id=740112396]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel" unique_id=1020219957]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 895.0
+offset_bottom = 526.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.57, 0.56)
+texture = ExtResource("2_xhh6f")
+stretch_mode = 6
+
+[node name="Title" parent="MainPanel" unique_id=313982728 instance=ExtResource("3_etjwi")]
+layout_mode = 1
+offset_left = 295.0
+offset_top = 68.0
+offset_right = 295.0
+offset_bottom = 68.0
+scale = Vector2(0.5, 0.562)
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel" unique_id=1492856590]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -130.0
+offset_top = 102.0
+offset_right = 143.0
+offset_bottom = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_right = 400
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MainPanel/MarginContainer" unique_id=1257330344]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MainPanel/MarginContainer/VBoxContainer2" unique_id=1912381375]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Debug Arena"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer" unique_id=1816242784]
+layout_mode = 2
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer" unique_id=1091447994]
+layout_mode = 2
+text = "Jugar"
+
+[node name="SettingsButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer" unique_id=503327817]
+layout_mode = 2
+text = "Opciones
+"
+
+[node name="QuitButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer" unique_id=1552566290]
+layout_mode = 2
+text = "Salir
+"
+
+[node name="OptionsPanel" type="Control" parent="." unique_id=931583844]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Opciones" parent="OptionsPanel" unique_id=1684543358 instance=ExtResource("4_158mb")]
+layout_mode = 1
+
+[connection signal="pressed" from="MainPanel/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

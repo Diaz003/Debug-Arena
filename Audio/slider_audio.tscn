@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://12icttaroiks"]
+
+[ext_resource type="Script" uid="uid://ya5tj8xossx7" path="res://Audio/slider_audio.gd" id="1_q2sbu"]
+
+[node name="SliderAudio" type="Control" unique_id=661129500]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q2sbu")
+
+[node name="HSlider" type="HSlider" parent="." unique_id=465533079]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.29900002
+anchor_top = 0.5
+anchor_right = 0.29900002
+anchor_bottom = 0.5
+offset_left = 0.55197144
+offset_top = -8.0
+offset_right = 462.55197
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+min_value = -40.0
+max_value = 0.0
+
+[connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
