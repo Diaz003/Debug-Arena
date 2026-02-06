@@ -69,10 +69,11 @@ layout_mode = 2
 layout_mode = 2
 text = "Fullscreen: OFF"
 
-[node name="QuitOptionsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1225405418]
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1225405418]
 layout_mode = 2
-text = "Salir
+text = "Volver
 "
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/FullscreenButton" to="." method="_on_fullscreen_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/QuitOptionsButton" to="." method="_on_quit_options_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BackButton" to="." method="_on_quit_options_button_pressed"]

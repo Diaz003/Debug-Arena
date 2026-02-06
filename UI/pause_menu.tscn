@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://flndab53meod"]
 
 [ext_resource type="Script" uid="uid://cagiceyg6vand" path="res://UI/pause_menu.gd" id="1_ltd3m"]
-[ext_resource type="PackedScene" uid="uid://12icttaroiks" path="res://Audio/slider_audio.tscn" id="2_jfm1e"]
+[ext_resource type="PackedScene" uid="uid://dlg0p3fm8doel" path="res://Scenes/opciones.tscn" id="2_jfm1e"]
 
 [node name="PauseMenu" type="Control" unique_id=1241082772]
 process_mode = 2
@@ -24,8 +24,11 @@ color = Color(0, 0, 0, 0.35686275)
 
 [node name="PausePanel" type="Control" parent="." unique_id=1009277807]
 layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="PanelLabel" type="VBoxContainer" parent="PausePanel" unique_id=780154707]
 layout_mode = 0
@@ -61,18 +64,16 @@ text = "Opciones
 layout_mode = 2
 text = "Menú"
 
-[node name="Control" type="Control" parent="." unique_id=778020032]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="OptionsPanel" type="Control" parent="." unique_id=970280834]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Label" type="Label" parent="Control" unique_id=494553290]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Opciones"
-
-[node name="SliderAudio" parent="Control" unique_id=661129500 instance=ExtResource("2_jfm1e")]
+[node name="Opciones" parent="OptionsPanel" unique_id=1684543358 instance=ExtResource("2_jfm1e")]
 layout_mode = 1
 
 [connection signal="pressed" from="PausePanel/ButtonsBox/ResumeButton" to="." method="_on_resume_button_pressed"]
