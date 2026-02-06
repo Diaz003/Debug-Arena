@@ -38,12 +38,13 @@ El proyecto está diseñado como un juego compacto y alcanzable, centrado en mec
 - **Movimiento:** WASD  
 - **Apuntar:** Ratón  
 - **Disparo:** Automático / Click izquierdo  
+- **Pausa:** ESC
 
 ---
 
 ## 🛠️ Tecnologías utilizadas
 
-- **Motor:** Godot Engine  
+- **Motor:** Godot Engine 4  
 - **Lenguaje:** GDScript  
 - **Estilo:** 2D Pixel Art  
 
@@ -51,10 +52,15 @@ El proyecto está diseñado como un juego compacto y alcanzable, centrado en mec
 
 ## 🎵 Créditos (audio)
 
-- "Películas y efectos especiales - Drone hostile alien lands ambient background track"
-  Fuente: Pixabay
-  Enlace: https://pixabay.com/es/sound-effects/pel%c3%adculas-y-efectos-especiales-drone-hostile-alien-lands-ambient-background-track-376124/
-  Licencia: DRONE - Hostile Alien Lands - Ambient Background Track
+### Música de menú
+- "Películas y efectos especiales - Drone hostile alien lands ambient background track"  
+  Fuente: Pixabay  
+  Enlace: [https://pixabay.com/es/sound-effects/pel%c3%adculas-y-efectos-especiales-drone-hostile-alien-lands-ambient-background-track-376124/](https://pixabay.com/es/sound-effects/pel%c3%adculas-y-efectos-especiales-drone-hostile-alien-lands-ambient-background-track-376124/)
+
+### Música de juego
+- "Neon Dreams"  
+  Fuente: Pixabay  
+  Enlace: [https://pixabay.com/music/techno-trance-neon-dreams-227580/](https://pixabay.com/music/techno-trance-neon-dreams-227580/)
 
 ---
 
@@ -68,14 +74,13 @@ El código se actualiza de forma regular para reflejar el progreso diario.
 ## 🔗 Enlaces
 
 - Repositorio GitHub:  
-  https://github.com/Diaz003
+  [https://github.com/Diaz003](https://github.com/Diaz003)
 
 - Página de itch.io:  
-  https://itch.io/profile/diaz003
+  [https://itch.io/profile/diaz003](https://itch.io/profile/diaz003)
 
 ---
 
 ## 📌 Notas
 
 Este proyecto prioriza la jugabilidad funcional y un alcance realista, evitando sistemas complejos como mapas extensos, inventarios avanzados o multijugador.
-****
