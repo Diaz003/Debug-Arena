@@ -22,6 +22,7 @@ buses/default_bus_layout="uid://d4fly6fk8h35d"
 
 MusicPlayer="*uid://b35m21mgfrcgw"
 GameState="*uid://ctwt8bq8meqja"
+SceneTransition="*uid://c6r8lkhbh8pj0"
 
 [display]
 

@@ -2,7 +2,7 @@ extends Control
 
 signal back_pressed
 
-@onready var fullscreen_btn: Button = $MarginContainer/VBoxContainer/FullscreenButton
+@onready var fullscreen_btn: Button = $VBoxContainer/FullscreenButton
 
 func _ready() -> void:
 	_update_fullscreen_text()
