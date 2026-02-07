@@ -64,6 +64,17 @@ El proyecto está diseñado como un juego compacto y alcanzable, centrado en mec
 
 ---
 
+## 🎨 Créditos gráficos y tipografías
+
+### Fuente principal
+
+- **ArcadeClassic**  
+  Diseñador: Yuji Oshimoto  
+  Licencia: Consultar en la página oficial  
+  Fuente: https://www.1001fonts.com/arcadeclassic-font.html
+
+---
+
 ## 📁 Estado del proyecto
 
 Proyecto en desarrollo como trabajo académico.  
