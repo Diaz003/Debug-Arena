@@ -3,7 +3,28 @@
 [ext_resource type="Script" uid="uid://dqq82nv725xog" path="res://menu.gd" id="1_1rerr"]
 [ext_resource type="Texture2D" uid="uid://ck64mjk7jeep7" path="res://Scenes/menu/menu.png" id="2_xhh6f"]
 [ext_resource type="PackedScene" uid="uid://cjdtsy6n7hf1s" path="res://Scenes/title/title.tscn" id="3_etjwi"]
+[ext_resource type="Texture2D" uid="uid://cqick4oa35ns3" path="res://UI/Buttons/boton_normal.png" id="4_7g6em"]
 [ext_resource type="PackedScene" uid="uid://dlg0p3fm8doel" path="res://Scenes/opciones/opciones.tscn" id="4_158mb"]
+[ext_resource type="FontFile" uid="uid://biev7coe5ekht" path="res://Letter/ARCADECLASSIC.TTF" id="4_puqa6"]
+[ext_resource type="Texture2D" uid="uid://c7ui3ap2nl1bf" path="res://UI/Buttons/boton_hover.png" id="5_puqa6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ku2mk"]
+texture = ExtResource("4_7g6em")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_34jek"]
+texture = ExtResource("5_puqa6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_puqa6"]
+texture = ExtResource("4_7g6em")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0l81c"]
+texture = ExtResource("5_puqa6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wksr7"]
+texture = ExtResource("4_7g6em")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bro2n"]
+texture = ExtResource("5_puqa6")
 
 [node name="menu" type="Control" unique_id=115816410]
 layout_mode = 3
@@ -37,11 +58,16 @@ stretch_mode = 6
 
 [node name="Title" parent="MainPanel" unique_id=313982728 instance=ExtResource("3_etjwi")]
 layout_mode = 1
-offset_left = 367.0
-offset_top = 83.0
-offset_right = 367.0
-offset_bottom = 83.0
-scale = Vector2(0.4, 0.45)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.49997
+offset_top = -242.0
+offset_right = -82.50925
+offset_bottom = -242.0
+scale = Vector2(0.489, 0.55)
 
 [node name="MarginContainer" type="MarginContainer" parent="MainPanel" unique_id=1492856590]
 layout_mode = 1
@@ -60,26 +86,44 @@ theme_override_constants/margin_right = 400
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer" unique_id=1816242784]
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 30
 alignment = 1
 
 [node name="PlayButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer" unique_id=1091447994]
+texture_filter = 1
 clip_contents = true
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-text = "Jugar"
+theme_override_colors/font_color = Color(0.17575929, 0.9999997, 0.94503444, 1)
+theme_override_fonts/font = ExtResource("4_puqa6")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_ku2mk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_34jek")
+text = "PLAY"
 
 [node name="SettingsButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer" unique_id=503327817]
+texture_filter = 1
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-text = "Opciones
+theme_override_colors/font_color = Color(0.1764706, 1, 0.94509804, 1)
+theme_override_fonts/font = ExtResource("4_puqa6")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_puqa6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0l81c")
+text = "OPTIONS
 "
 
 [node name="QuitButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer" unique_id=1552566290]
+texture_filter = 1
 clip_contents = true
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-text = "Salir
+theme_override_colors/font_color = Color(0.1764706, 1, 0.94509804, 1)
+theme_override_fonts/font = ExtResource("4_puqa6")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_wksr7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bro2n")
+text = "EXIT
 "
 
 [node name="OptionsPanel" type="Control" parent="." unique_id=931583844]

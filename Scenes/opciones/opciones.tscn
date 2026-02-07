@@ -4,6 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://ck64mjk7jeep7" path="res://Scenes/menu/menu.png" id="1_vck7s"]
 [ext_resource type="PackedScene" uid="uid://12icttaroiks" path="res://Audio/slider_audio.tscn" id="2_o14iw"]
 [ext_resource type="Texture2D" uid="uid://bfyh01xaoakj6" path="res://Scenes/opciones/opciones.png" id="4_5lfus"]
+[ext_resource type="FontFile" uid="uid://biev7coe5ekht" path="res://Letter/ARCADECLASSIC.TTF" id="4_sk3qc"]
+[ext_resource type="Texture2D" uid="uid://cqick4oa35ns3" path="res://UI/Buttons/boton_normal.png" id="5_5ik2k"]
+[ext_resource type="Texture2D" uid="uid://c7ui3ap2nl1bf" path="res://UI/Buttons/boton_hover.png" id="6_2tmxg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_miiiy"]
+texture = ExtResource("5_5ik2k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k68b0"]
+texture = ExtResource("6_2tmxg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sk3qc"]
+texture = ExtResource("5_5ik2k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5ik2k"]
+texture = ExtResource("6_2tmxg")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mn2kl"]
 atlas = ExtResource("4_5lfus")
@@ -223,7 +238,7 @@ offset_right = -306.0
 offset_bottom = -119.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 30
 alignment = 1
 
 [node name="Row_Sonido" type="HBoxContainer" parent="VBoxContainer" unique_id=1105593556]
@@ -241,15 +256,26 @@ texture_filter = 1
 layout_mode = 2
 
 [node name="FullscreenButton" type="Button" parent="VBoxContainer" unique_id=1227011247]
+texture_filter = 1
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-text = "Fullscreen: OFF"
+theme_override_colors/font_color = Color(0.1764706, 1, 0.94509804, 1)
+theme_override_fonts/font = ExtResource("4_sk3qc")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_miiiy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k68b0")
+text = "Fullscreen : OFF"
 
 [node name="BackButton" type="Button" parent="VBoxContainer" unique_id=1225405418]
+texture_filter = 1
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-text = "Volver
-"
+theme_override_colors/font_color = Color(0.1764706, 1, 0.94509804, 1)
+theme_override_fonts/font = ExtResource("4_sk3qc")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_sk3qc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5ik2k")
+text = "BACK"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=581580112]
 texture_filter = 1
@@ -261,5 +287,5 @@ frame_progress = 0.7808747
 speed_scale = 1.35
 
 [connection signal="pressed" from="VBoxContainer/FullscreenButton" to="." method="_on_fullscreen_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_quit_options_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_quit_options_button_pressed"]
