@@ -16,6 +16,11 @@ func fade_to_scene(target_scene: String) -> void:
 	await fade_in()
 	print("FADE IN END")
 
+	# justo después de la transición
+	var main := get_tree().current_scene
+	if main.has_method("show_tutorial"):
+		main.show_tutorial()
+
 func fade_in() -> void:
 	fade.visible = true
 	fade.modulate.a = 1.0

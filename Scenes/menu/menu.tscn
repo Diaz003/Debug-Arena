@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://hu21i88j11kw"]
 
 [ext_resource type="Script" uid="uid://dqq82nv725xog" path="res://menu.gd" id="1_1rerr"]
-[ext_resource type="Texture2D" uid="uid://ck64mjk7jeep7" path="res://Scenes/menu/menu.png" id="2_xhh6f"]
+[ext_resource type="PackedScene" uid="uid://coni7taomi02c" path="res://Scenes/menu/menu_background.tscn" id="2_ku2mk"]
 [ext_resource type="PackedScene" uid="uid://cjdtsy6n7hf1s" path="res://Scenes/title/title.tscn" id="3_etjwi"]
 [ext_resource type="Texture2D" uid="uid://cqick4oa35ns3" path="res://UI/Buttons/boton_normal.png" id="4_7g6em"]
 [ext_resource type="PackedScene" uid="uid://dlg0p3fm8doel" path="res://Scenes/opciones/opciones.tscn" id="4_158mb"]
@@ -34,6 +34,15 @@ offset_right = -0.15209961
 offset_bottom = -4.0
 script = ExtResource("1_1rerr")
 
+[node name="MenuBackground" parent="." unique_id=476532375 instance=ExtResource("2_ku2mk")]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.9990001
+anchor_bottom = 1.005
+offset_right = 13.152954
+offset_bottom = 12.780029
+
 [node name="MainPanel" type="Control" parent="." unique_id=740112396]
 layout_mode = 1
 anchors_preset = 15
@@ -41,20 +50,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="MainPanel" unique_id=1020219957]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 895.0
-offset_bottom = 526.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.57, 0.56)
-texture = ExtResource("2_xhh6f")
-stretch_mode = 6
 
 [node name="Title" parent="MainPanel" unique_id=313982728 instance=ExtResource("3_etjwi")]
 layout_mode = 1
@@ -94,7 +89,7 @@ texture_filter = 1
 clip_contents = true
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.17575929, 0.9999997, 0.94503444, 1)
+theme_override_colors/font_color = Color(0.1764706, 1, 0.94509804, 1)
 theme_override_fonts/font = ExtResource("4_puqa6")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxTexture_ku2mk")

@@ -1,7 +1,9 @@
 extends Node2D
 
-func play_idle_animation():
-	%AnimationPlayer.play("idle")
+@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
-func play_walk_animation():
-	%AnimationPlayer.play("walk")
+func play_idle_animation() -> void:
+	anim.play("idle")
+
+func play_walk_animation() -> void:
+	anim.play("walk")

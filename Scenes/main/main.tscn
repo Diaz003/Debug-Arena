@@ -42,11 +42,13 @@ position = Vector2(1192, 324)
 shape = SubResource("RectangleShape2D_h2yge")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=857420803]
+visible = false
 position = Vector2(632, 678)
 
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=28057387]
 
 [node name="PauseMenu" parent="UILayer" unique_id=1241082772 instance=ExtResource("4_jjvhh")]
+visible = false
 anchors_preset = -1
 offset_left = 2.0
 offset_top = 1.0

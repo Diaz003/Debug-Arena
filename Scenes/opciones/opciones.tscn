@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dlg0p3fm8doel"]
 
 [ext_resource type="Script" uid="uid://b4xnlct5nbnvw" path="res://Scenes/opciones/opciones.gd" id="1_3hjeq"]
-[ext_resource type="Texture2D" uid="uid://ck64mjk7jeep7" path="res://Scenes/menu/menu.png" id="1_vck7s"]
+[ext_resource type="PackedScene" uid="uid://coni7taomi02c" path="res://Scenes/menu/menu_background.tscn" id="2_5ik2k"]
 [ext_resource type="PackedScene" uid="uid://12icttaroiks" path="res://Audio/slider_audio.tscn" id="2_o14iw"]
 [ext_resource type="Texture2D" uid="uid://bfyh01xaoakj6" path="res://Scenes/opciones/opciones.png" id="4_5lfus"]
 [ext_resource type="FontFile" uid="uid://biev7coe5ekht" path="res://Letter/ARCADECLASSIC.TTF" id="4_sk3qc"]
@@ -213,19 +213,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3hjeq")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1292483759]
-texture_filter = 1
+[node name="MenuBackground" parent="." unique_id=476532375 instance=ExtResource("2_5ik2k")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -0.5
-offset_right = 895.5
-offset_bottom = 526.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.57, 0.56)
-texture = ExtResource("1_vck7s")
+offset_right = 14.0
+offset_bottom = 8.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=778371086]
 layout_mode = 1
@@ -249,7 +240,7 @@ theme_override_constants/separation = 8
 [node name="Label" type="Label" parent="VBoxContainer/Row_Sonido" unique_id=1917159992]
 layout_mode = 2
 size_flags_horizontal = 0
-text = "Sonido : "
+text = "Sonido "
 
 [node name="SliderAudio" parent="VBoxContainer/Row_Sonido" unique_id=661129500 instance=ExtResource("2_o14iw")]
 texture_filter = 1
@@ -277,7 +268,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_sk3qc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_5ik2k")
 text = "BACK"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=581580112]
+[node name="titleOptions" type="AnimatedSprite2D" parent="." unique_id=581580112]
 texture_filter = 1
 position = Vector2(580, 226)
 sprite_frames = SubResource("SpriteFrames_yc0cl")
@@ -287,5 +278,5 @@ frame_progress = 0.7808747
 speed_scale = 1.35
 
 [connection signal="pressed" from="VBoxContainer/FullscreenButton" to="." method="_on_fullscreen_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_quit_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
