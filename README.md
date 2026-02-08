@@ -62,6 +62,16 @@ El proyecto está diseñado como un juego compacto y alcanzable, centrado en mec
   Fuente: Pixabay  
   Enlace: [https://pixabay.com/music/techno-trance-neon-dreams-227580/](https://pixabay.com/music/techno-trance-neon-dreams-227580/)
 
+### Sonido de Game Over
+- "Musical Game Over"  
+  Autor: [calango_fx_official](https://pixabay.com/es/users/calango_fx_official-52172903/)  
+  Fuente: Pixabay  
+  Enlace: https://pixabay.com/es/sound-effects/musical-game-over-401236/
+
+### Sonido de victoria
+- "Jingle_Win_00.wav" – [LittleRobotSoundFactory](https://freesound.org/people/LittleRobotSoundFactory/) (Freesound)  
+  Enlace: https://freesound.org/people/LittleRobotSoundFactory/sounds/270528/
+
 ---
 
 ## 🎨 Créditos gráficos y tipografías
