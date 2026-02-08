@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://csb6n0h8xbr2d" path="res://Characters/Player/player.gd" id="1_kqmy0"]
 [ext_resource type="PackedScene" uid="uid://bqd1aqb03ljcb" path="res://Characters/Dev/Movimientos/dev.tscn" id="2_kqmy0"]
+[ext_resource type="PackedScene" uid="uid://cr4jukpfcmwcd" path="res://Wearpons/Guns_keyboard/gun.tscn" id="3_cue0d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kqmy0"]
 size = Vector2(102.49999, 171)
@@ -15,12 +16,12 @@ position = Vector2(-36, -64)
 scale = Vector2(0.42614523, 0.40256497)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1787425943]
-visible = false
 position = Vector2(-0.99999833, 0.5)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_kqmy0")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2076858467]
+visible = false
 zoom = Vector2(1.5, 1.5)
 limit_left = -81
 limit_top = -75
@@ -28,3 +29,11 @@ limit_right = 1233
 limit_bottom = 678
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
+
+[node name="GunAnchor" type="Node2D" parent="." unique_id=311689807]
+position = Vector2(-82, 0)
+
+[node name="Gun" parent="GunAnchor" unique_id=1568015925 instance=ExtResource("3_cue0d")]
+texture_filter = 1
+position = Vector2(192, 1.999999)
+scale = Vector2(0.15, 0.133)

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cxq8mowf1ordo"]
+
+[ext_resource type="Script" uid="uid://duh05ssy1acg1" path="res://Wearpons/Guns_keyboard/bullet.gd" id="1_trf6g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trf6g"]
+size = Vector2(8, 8)
+
+[node name="Bullet" type="Area2D" unique_id=927638223]
+script = ExtResource("1_trf6g")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=755819111]
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+color = Color(0.8246753, 0.0010858297, 0.90494406, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1559479401]
+shape = SubResource("RectangleShape2D_trf6g")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

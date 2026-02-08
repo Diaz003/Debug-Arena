@@ -3,28 +3,29 @@ extends CanvasLayer
 @onready var fade: ColorRect = $Fade
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	fade.visible = false
+	fade.modulate.a = 0.0
+
 
 func fade_to_scene(target_scene: String) -> void:
-	print("FADE TO SCENE START")
 	fade.visible = true
+	fade.modulate.a = 0.0
+
 	var tween := create_tween()
-	tween.tween_property(fade, "modulate:a", 1.0, 0.8) # antes 2.0
+	tween.tween_property(fade, "modulate:a", 1.0, 0.8) 
 	await tween.finished
-	print("FADE BLACK END, CHANGE SCENE")
+
 	get_tree().change_scene_to_file(target_scene)
 	await fade_in()
-	print("FADE IN END")
-
-	# justo después de la transición
-	var main := get_tree().current_scene
-	if main.has_method("show_tutorial"):
-		main.show_tutorial()
 
 func fade_in() -> void:
 	fade.visible = true
 	fade.modulate.a = 1.0
+
 	var tween := create_tween()
-	tween.tween_property(fade, "modulate:a", 0.0, 0.5) # antes 1.0
+	tween.tween_property(fade, "modulate:a", 0.0, 0.5)
 	await tween.finished
+
+	fade.modulate.a = 0.0
 	fade.visible = false

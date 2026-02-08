@@ -1,7 +1,6 @@
 extends Control
 
 func _ready() -> void:
-	print("READY TUTORIAL")
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	visible = true
 	get_tree().paused = true

@@ -44,6 +44,9 @@ func _on_options_button_pressed() -> void:
 	_show_options()
 
 func _on_menu_button_pressed() -> void:
-	close()
-	MusicPlayer.play_menu_music()
+	var main := get_tree().get_first_node_in_group("main")  
+	if main and ("game_ended" in main):
+		main.game_ended = true
+
+	get_tree().paused = false
 	await SceneTransition.fade_to_scene("res://Scenes/menu/menu.tscn")

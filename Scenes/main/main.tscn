@@ -3,7 +3,12 @@
 [ext_resource type="Script" uid="uid://blee66qc2tl5j" path="res://Scenes/main/main.gd" id="1_8gbba"]
 [ext_resource type="Texture2D" uid="uid://8j0pryf1edrt" path="res://Maps/Maps.png" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://b4buqq1nruox0" path="res://Characters/Player/player.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://bl1krq2g2wd7p" path="res://UI/Life/GameUI.tscn" id="4_hgq70"]
 [ext_resource type="PackedScene" uid="uid://flndab53meod" path="res://Scenes/pause/pause_menu.tscn" id="4_jjvhh"]
+[ext_resource type="Script" uid="uid://y62rft1oql55" path="res://Scenes/main/bugs_spawner.gd" id="5_brlrh"]
+[ext_resource type="PackedScene" uid="uid://c4xjytgj5gyfw" path="res://Characters/enemy/Bug.tscn" id="6_4jhlv"]
+[ext_resource type="PackedScene" uid="uid://doo33h7xoissl" path="res://Scenes/winner/winner.tscn" id="7_b3x3g"]
+[ext_resource type="PackedScene" uid="uid://gmjj1nyug5ls" path="res://Scenes/loser/loser.tscn" id="9_8lqer"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(1316.5, 79.25)
@@ -20,8 +25,19 @@ position = Vector2(576, 327.99997)
 scale = Vector2(0.38806853, 0.41653743)
 texture = ExtResource("1_bo1nx")
 
-[node name="player" parent="." unique_id=2000575875 instance=ExtResource("2_8gbba")]
+[node name="player" parent="." unique_id=2000575875 groups=["player"] instance=ExtResource("2_8gbba")]
 position = Vector2(357, 195)
+
+[node name="GameUi" parent="player" unique_id=678358713 instance=ExtResource("4_hgq70")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -716.0
+offset_top = -232.0
+offset_right = 762.0
+offset_bottom = 45.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="walls" type="StaticBody2D" parent="." unique_id=2058272742]
 
@@ -56,3 +72,17 @@ offset_right = 2.0
 offset_bottom = 1.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="BugsSpawner" type="Node2D" parent="." unique_id=1425897858]
+script = ExtResource("5_brlrh")
+bug_scene = ExtResource("6_4jhlv")
+
+[node name="WinnerOverlay" type="CanvasLayer" parent="." unique_id=232116505]
+visible = false
+
+[node name="WinnerUI" parent="WinnerOverlay" unique_id=928980744 instance=ExtResource("7_b3x3g")]
+
+[node name="LoserOverlay" type="CanvasLayer" parent="." unique_id=176152415]
+visible = false
+
+[node name="LoserUI" parent="LoserOverlay" unique_id=454946661 instance=ExtResource("9_8lqer")]
